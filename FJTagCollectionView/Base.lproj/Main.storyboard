@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="2ky-dB-SiH">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Qcu-KH-b3t">
+            <objects>
+                <navigationController id="2ky-dB-SiH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="NCl-Jp-ZU9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Abl-Hy-geD" kind="relationship" relationship="rootViewController" id="AGP-Ex-ZGj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAT-T8-eSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207" y="386"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5vl-JR-cPV">
+            <objects>
+                <viewController id="Abl-Hy-geD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M7h-2e-7UF"/>
+                        <viewControllerLayoutGuide type="bottom" id="88n-1G-UMw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aDX-75-SF0">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxT-dz-Pjy">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="N6z-gg-2jH"/>
+                                    <constraint firstAttribute="height" constant="30" id="s0i-xA-R3h"/>
+                                </constraints>
+                                <state key="normal" title="FJ"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="Orr-oz-pEE"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="说明：FJTagCollectionLayout是一个宽度不同高度相同的规则排列(居中 居左 居右)。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wiO-vH-UMz">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="J4n-8n-U5V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wiO-vH-UMz" firstAttribute="leading" secondItem="aDX-75-SF0" secondAttribute="leading" id="Bbk-9h-f53"/>
+                            <constraint firstItem="rxT-dz-Pjy" firstAttribute="centerY" secondItem="aDX-75-SF0" secondAttribute="centerY" id="QZq-N4-Xyo"/>
+                            <constraint firstItem="rxT-dz-Pjy" firstAttribute="centerX" secondItem="aDX-75-SF0" secondAttribute="centerX" id="VxX-3Q-fmF"/>
+                            <constraint firstItem="wiO-vH-UMz" firstAttribute="top" secondItem="M7h-2e-7UF" secondAttribute="bottom" id="raN-7q-EbY"/>
+                            <constraint firstAttribute="trailing" secondItem="wiO-vH-UMz" secondAttribute="trailing" id="xDu-Ld-DXJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="m3s-Oe-HQK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5w-MH-EhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195" y="386"/>
+        </scene>
+        <!--标签-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="标签" id="yTO-Ch-Nex"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="386"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
