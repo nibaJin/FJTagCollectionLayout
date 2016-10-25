@@ -12,9 +12,9 @@
 
 @interface FJTagCollectionLayout ()
 
-@property (nonatomic, assign) CGPoint endPoint;
+@property (nonatomic, assign) CGPoint endPoint; //
 
-@property (nonatomic, assign) NSInteger count;
+@property (nonatomic, assign) NSInteger count;  //
 
 @property (nonatomic, assign) BOOL isUpdateRow; // 是否要更新上一行的cell
 
@@ -22,7 +22,7 @@
 
 @property (nonatomic, assign) NSInteger endIndex; // 行结束的index
 
-@property (nonatomic, strong) NSMutableArray *cache;
+@property (nonatomic, strong) NSMutableArray *cache; // layoutCache
 @end
 
 @implementation FJTagCollectionLayout

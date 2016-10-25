@@ -10,7 +10,6 @@
 		7733F4BC1C4773060013E545 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7733F4B71C4773060013E545 /* ViewController.m */; };
 		7733F4C61C4773620013E545 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7733F4C21C4773620013E545 /* CollectionViewCell.m */; };
 		7733F4C71C4773620013E545 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7733F4C31C4773620013E545 /* CollectionViewCell.xib */; };
-		7733F4D41C4786F80013E545 /* UIScrollView+TouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7733F4D31C4786F80013E545 /* UIScrollView+TouchEvent.m */; };
 		77E936561C44F4B200EA7214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E936551C44F4B200EA7214 /* main.m */; };
 		77E936591C44F4B200EA7214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E936581C44F4B200EA7214 /* AppDelegate.m */; };
 		77E9365F1C44F4B200EA7214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E9365D1C44F4B200EA7214 /* Main.storyboard */; };
@@ -36,8 +35,6 @@
 		7733F4C11C4773620013E545 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		7733F4C21C4773620013E545 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		7733F4C31C4773620013E545 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
-		7733F4D21C4786F80013E545 /* UIScrollView+TouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TouchEvent.h"; sourceTree = "<group>"; };
-		7733F4D31C4786F80013E545 /* UIScrollView+TouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TouchEvent.m"; sourceTree = "<group>"; };
 		77E936511C44F4B200EA7214 /* FJTagCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FJTagCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E936551C44F4B200EA7214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77E936571C44F4B200EA7214 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,8 +75,6 @@
 				7733F4B61C4773060013E545 /* ViewController.h */,
 				7733F4B71C4773060013E545 /* ViewController.m */,
 				77E9365D1C44F4B200EA7214 /* Main.storyboard */,
-				7733F4D21C4786F80013E545 /* UIScrollView+TouchEvent.h */,
-				7733F4D31C4786F80013E545 /* UIScrollView+TouchEvent.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,7 +251,6 @@
 			files = (
 				7733F4C61C4773620013E545 /* CollectionViewCell.m in Sources */,
 				7733F4BC1C4773060013E545 /* ViewController.m in Sources */,
-				7733F4D41C4786F80013E545 /* UIScrollView+TouchEvent.m in Sources */,
 				77E9367C1C44F54B00EA7214 /* FJTagCollectionLayout.m in Sources */,
 				77E936591C44F4B200EA7214 /* AppDelegate.m in Sources */,
 				77E936561C44F4B200EA7214 /* main.m in Sources */,
