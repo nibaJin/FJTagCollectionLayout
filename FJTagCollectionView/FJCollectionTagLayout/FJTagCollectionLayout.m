@@ -8,8 +8,6 @@
 
 #import "FJTagCollectionLayout.h"
 
-#define MainWidth [UIScreen mainScreen].bounds.size.width
-
 @interface FJTagCollectionLayout ()
 
 @property (nonatomic, assign) CGPoint endPoint; //
@@ -23,9 +21,24 @@
 @property (nonatomic, assign) NSInteger endIndex; // 行结束的index
 
 @property (nonatomic, strong) NSMutableArray *cache; // layoutCache
+
 @end
 
 @implementation FJTagCollectionLayout
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        // default layout
+        _sectionInset = UIEdgeInsetsZero;
+        _lineSpacing = 10;
+        _itemSpacing = 10;
+        _itemHeigh = 30;
+        _layoutAligned = FJTagLayoutAlignedLeft;
+    }
+    return self;
+}
+
 - (void)prepareLayout
 {
     [super prepareLayout];
@@ -61,9 +74,9 @@
                 
                 CGFloat offsetX;
                 if (_layoutAligned == FJTagLayoutAlignedMiddle) {
-                    offsetX = (beginAttr.frame.origin.x - (MainWidth - endAttr.frame.origin.x - endAttr.frame.size.width))*0.5; // 居中
+                    offsetX = (beginAttr.frame.origin.x - (CGRectGetWidth(self.collectionView.frame) - endAttr.frame.origin.x - endAttr.frame.size.width))*0.5; // 居中
                 }else{
-                    offsetX = _sectionInset.right - (MainWidth - endAttr.frame.origin.x - endAttr.frame.size.width); // 居右
+                    offsetX = _sectionInset.right - (CGRectGetWidth(self.collectionView.frame) - endAttr.frame.origin.x - endAttr.frame.size.width); // 居右
                 }
                 
                 for (NSInteger i = _beginIndex; i <= _endIndex; i ++ ) {
@@ -79,10 +92,10 @@
                     
                     CGFloat offsetX;
                     if (_layoutAligned == FJTagLayoutAlignedMiddle) {
-                        offsetX = (lastAttr.frame.origin.x - (MainWidth - lastAttr.frame.origin.x - lastAttr.frame.size.width))*0.5; // 居中
+                        offsetX = (lastAttr.frame.origin.x - (CGRectGetWidth(self.collectionView.frame) - lastAttr.frame.origin.x - lastAttr.frame.size.width))*0.5; // 居中
   
                     }else{
-                        offsetX = _sectionInset.right - (MainWidth - lastAttr.frame.origin.x - lastAttr.frame.size.width); // 居右
+                        offsetX = _sectionInset.right - (CGRectGetWidth(self.collectionView.frame) - lastAttr.frame.origin.x - lastAttr.frame.size.width); // 居右
                     }
                     //UICollectionViewLayoutAttributes *updateAttr = _cache[_endIndex];
                     lastAttr.frame = CGRectMake(lastAttr.frame.origin.x - offsetX, lastAttr.frame.origin.y, lastAttr.frame.size.width, lastAttr.frame.size.height);
