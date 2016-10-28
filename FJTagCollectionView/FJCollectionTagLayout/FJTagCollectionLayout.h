@@ -17,6 +17,7 @@ typedef NS_ENUM(NSInteger,FJTagLayoutAligned)
 @class FJTagCollectionLayout;
 @protocol FJTagCollectionLayoutDelegate <NSObject>
 @required
+// item width
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout widthAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
@@ -24,14 +25,14 @@ typedef NS_ENUM(NSInteger,FJTagLayoutAligned)
 
 @property (nonatomic, weak) id<FJTagCollectionLayoutDelegate> delegate;
 
-@property (nonatomic, assign) UIEdgeInsets sectionInset; //sectionInset
+@property (nonatomic, assign) UIEdgeInsets sectionInset; //sectionInset ,default UIEdgeInsetsZero
 
-@property (nonatomic, assign) CGFloat lineSpacing;  //line space
+@property (nonatomic, assign) CGFloat lineSpacing;  //line space ,default 10
 
-@property (nonatomic, assign) CGFloat itemSpacing; //item space
+@property (nonatomic, assign) CGFloat itemSpacing; //item space ,default 10
 
-@property (nonatomic, assign) CGFloat itemHeigh;  //item heigh
+@property (nonatomic, assign) CGFloat itemHeigh;  //item heigh, default 30
 
-@property (nonatomic, assign) FJTagLayoutAligned layoutAligned;  //layoutAligned
+@property (nonatomic, assign) FJTagLayoutAligned layoutAligned;  //layoutAligned, default FJTagLayoutAlignedLeft
 
 @end
