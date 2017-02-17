@@ -73,7 +73,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7733F4AF1C4773060013E545 /* View */ = {
+		7733F4AF1C4773060013E545 /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				7733F4BD1C4773620013E545 /* Cell */,
@@ -81,6 +81,7 @@
 				7733F4B71C4773060013E545 /* ViewController.m */,
 				77E9365D1C44F4B200EA7214 /* Main.storyboard */,
 			);
+			name = Example;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -119,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				77E936791C44F54B00EA7214 /* FJCollectionTagLayout */,
-				7733F4AF1C4773060013E545 /* View */,
+				7733F4AF1C4773060013E545 /* Example */,
 				77E936571C44F4B200EA7214 /* AppDelegate.h */,
 				77E936581C44F4B200EA7214 /* AppDelegate.m */,
 				77E936601C44F4B200EA7214 /* Assets.xcassets */,
