@@ -39,11 +39,22 @@
 {
     // 例子 - 可根据自己的需求来变 
     FJTagCollectionLayout *tagLayout = [[FJTagCollectionLayout alloc] init];
+    
+    //section inset
     tagLayout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    
+    // 行间距
     tagLayout.lineSpacing = 10;
+    
+    // item间距
     tagLayout.itemSpacing = 10;
+    
+    // item高度
     tagLayout.itemHeigh = 30;
-    tagLayout.layoutAligned = FJTagLayoutAlignedLeft;
+    
+    // 对齐形式
+    tagLayout.layoutAligned = FJTagLayoutAlignedRight;
+    
     tagLayout.delegate = self;
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 64) collectionViewLayout:tagLayout];
