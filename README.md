@@ -23,9 +23,9 @@
     tagLayout.delegate = self;
 ```
 ### 居左
-![left](https://github.com/nibaJin/master/FJTagCollectionLayout/Screenshots/left.png)
+![left](https://github.com/nibaJin/FJTagCollectionLayout/tree/master/Screenshots/left.png)
 ### 局右
-![right](https://github.com/nibaJin/master/FJTagCollectionLayout/Screenshots/right.png)
+![right](https://github.com/nibaJin/FJTagCollectionLayout/tree/master/Screenshots/right.png)
 ### 局中
-![middle](https://github.com/nibaJin/master/FJTagCollectionLayout/Screenshots/middle.png)
+![middle](https://github.com/nibaJin/FJTagCollectionLayout/tree/master/Screenshots/middle.png)
 
