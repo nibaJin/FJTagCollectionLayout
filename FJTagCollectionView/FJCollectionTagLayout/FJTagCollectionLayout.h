@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+UIKIT_EXTERN NSString *const UICollectionElementKindSectionHeader;
+UIKIT_EXTERN NSString *const UICollectionElementKindSectionFooter;
+
 typedef NS_ENUM(NSInteger,FJTagLayoutAligned)
 {
   FJTagLayoutAlignedLeft ,
@@ -19,6 +22,12 @@ typedef NS_ENUM(NSInteger,FJTagLayoutAligned)
 @required
 // item width
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout widthAtIndexPath:(NSIndexPath *)indexPath;
+
+@optional
+//section header height
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout referenceHeightForHeaderInSection:(NSInteger)section;
+//section footer height
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout referenceHeightForFooterInSection:(NSInteger)section;
 @end
 
 @interface FJTagCollectionLayout : UICollectionViewLayout
