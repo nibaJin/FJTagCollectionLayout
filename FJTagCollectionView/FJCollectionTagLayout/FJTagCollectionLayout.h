@@ -25,9 +25,9 @@ typedef NS_ENUM(NSInteger,FJTagLayoutAligned)
 
 @optional
 //section header height
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout referenceHeightForHeaderInSection:(NSInteger)section;
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section;
 //section footer height
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout referenceHeightForFooterInSection:(NSInteger)section;
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section;
 @end
 
 @interface FJTagCollectionLayout : UICollectionViewLayout
