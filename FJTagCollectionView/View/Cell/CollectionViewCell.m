@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.backGroupView.layer.masksToBounds = YES;
-    self.backGroupView.layer.cornerRadius = 5.0;
+//    self.backGroupView.layer.cornerRadius = 5.0;
     self.backGroupView.layer.borderWidth = 0.5;
     self.backGroupView.layer.borderColor = [UIColor darkGrayColor].CGColor;
 }
