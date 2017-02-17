@@ -149,7 +149,7 @@
         self.isUpdateRow = NO;
         if (indexPath.item == 0) {
             x = self.sectionInset.left;
-            y = self.endPoint.y;
+            y = self.endPoint.y + self.sectionInset.top;
         }else{
             x = self.endPoint.x + self.itemSpacing;
             y = self.endPoint.y - heigh;
@@ -175,12 +175,11 @@
     if ([UICollectionElementKindSectionHeader isEqualToString:elementKind]) {
         UICollectionViewLayoutAttributes *headerAttri = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader withIndexPath:indexPath];
         CGSize size = CGSizeZero;
-        if ([self.delegate respondsToSelector:@selector(collectionView:layout:referenceHeightForHeaderInSection:)]) {
-            size.height = [self.delegate collectionView:self.collectionView layout:self referenceHeightForHeaderInSection:indexPath.section];
+        if ([self.delegate respondsToSelector:@selector(collectionView:layout:referenceSizeForHeaderInSection:)]) {
+            size = [self.delegate collectionView:self.collectionView layout:self referenceSizeForHeaderInSection:indexPath.section];
         }
-        CGFloat x = self.sectionInset.left;
-        CGFloat y = self.endPoint.y + self.sectionInset.top;
-        size.width = CGRectGetWidth(self.collectionView.frame) - self.sectionInset.left - self.sectionInset.right;
+        CGFloat x = 0.f;
+        CGFloat y = self.endPoint.y;
         headerAttri.frame = CGRectMake(x, y, size.width, size.height);
         //更新结束位置
         self.endPoint = CGPointMake(0, y + size.height);
@@ -191,15 +190,14 @@
     else {
         UICollectionViewLayoutAttributes *footerAttri = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionFooter withIndexPath:indexPath];
         CGSize size = CGSizeZero;
-        if ([self.delegate respondsToSelector:@selector(collectionView:layout:referenceHeightForFooterInSection:)]) {
-            size.height = [self.delegate collectionView:self.collectionView layout:self referenceHeightForFooterInSection:indexPath.section];
+        if ([self.delegate respondsToSelector:@selector(collectionView:layout:referenceSizeForFooterInSection:)]) {
+            size = [self.delegate collectionView:self.collectionView layout:self referenceSizeForFooterInSection:indexPath.section];
         }
-        CGFloat x = self.sectionInset.left;
-        CGFloat y = self.endPoint.y;
-        size.width = CGRectGetWidth(self.collectionView.frame) - self.sectionInset.left - self.sectionInset.right;
+        CGFloat x = 0.f;
+        CGFloat y = self.endPoint.y + self.sectionInset.bottom;
         footerAttri.frame = CGRectMake(x, y, size.width, size.height);
         // 更新结束位置
-        self.endPoint = CGPointMake(0, y + size.height + self.sectionInset.bottom);
+        self.endPoint = CGPointMake(0, y + size.height);
         return footerAttri;
     }
 }

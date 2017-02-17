@@ -41,7 +41,7 @@
     FJTagCollectionLayout *tagLayout = [[FJTagCollectionLayout alloc] init];
     
     //section inset
-    tagLayout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    tagLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     
     // 行间距
     tagLayout.lineSpacing = 10;
@@ -53,7 +53,7 @@
     tagLayout.itemHeigh = 30;
     
     // 对齐形式
-    tagLayout.layoutAligned = FJTagLayoutAlignedRight;
+    tagLayout.layoutAligned = FJTagLayoutAlignedMiddle;
     
     tagLayout.delegate = self;
     
@@ -116,14 +116,14 @@
         return size.width;
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout referenceHeightForHeaderInSection:(NSInteger)section
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section;
 {
-    return 40.f;
+    return CGSizeMake(CGRectGetWidth(self.view.frame), 40.f);
 }
 
-//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout referenceHeightForFooterInSection:(NSInteger)section
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(FJTagCollectionLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section;
 //{
-//    return 40.f;
+//    return CGSizeMake(CGRectGetWidth(self.view.frame), 40.f);
 //}
 
 #pragma mark - uuuuu
